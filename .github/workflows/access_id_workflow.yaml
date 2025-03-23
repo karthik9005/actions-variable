@@ -8,7 +8,8 @@ on:
 jobs:
   print-access-id:
     runs-on: ubuntu-latest
-
+    env:
+      ACCESS_ID: ${{ vars.ACCESS_ID }}
     steps:
       - name: Print ACCESS_ID from GitHub Variables
         run: echo "The ACCESS_ID is ${{ vars.ACCESS_ID }}"
