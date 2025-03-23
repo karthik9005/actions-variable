@@ -1,0 +1,15 @@
+name: Access ID Workflow
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  print-access-id:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print ACCESS_ID from GitHub Variables
+        run: echo "The ACCESS_ID is ${{ vars.ACCESS_ID }}"
+
